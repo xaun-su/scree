@@ -1,6 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import debounce from 'lodash.debounce'; // 或者自己实现一个简单的 debounce 函数
-
+import debounce from 'lodash/debounce';
 // 设计稿的基准宽度
 const BASE_WIDTH = 1920;
 // 基准宽度下 HTML 的 font-size (方便计算，例如 1rem = 100px)
@@ -37,8 +36,6 @@ function useRemFontSize() {
       debouncedSetRemFontSize.cancel();
     };
   }, []); // 空依赖数组表示只在组件挂载和卸载时运行
-
-  // 这个 Hook 不需要返回任何值，它的作用是副作用
 }
 
 export default useRemFontSize;

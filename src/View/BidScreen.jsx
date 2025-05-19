@@ -2,7 +2,7 @@ import React from 'react'
 import { FullScreenContainer,BorderBox1 } from '@jiaminghi/data-view-react'
 import './index.css'
 import Header from './commpent/Header/index'
-export default function bid() {
+export default function BidScreen() {
   return (
     <div className='bid'>
     {/* datav的全局容器组件，自适应组件 */}
