@@ -9,8 +9,8 @@ function setRemFontSize() {
   const screenWidth = window.innerWidth;
   // 计算新的 HTML font-size
   // 为了避免字体过小或过大，可以设置一个最小和最大限制
-  const minFontSize = 80; // 最小字体大小限制
-  const maxFontSize = 120; // 最大字体大小限制
+  const minFontSize = 95; // 最小字体大小限制
+  const maxFontSize = 105; // 最大字体大小限制
 
   let newFontSize = (screenWidth / BASE_WIDTH) * BASE_FONT_SIZE;
 
