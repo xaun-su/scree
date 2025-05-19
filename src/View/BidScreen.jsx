@@ -2,6 +2,10 @@ import React from 'react'
 import { FullScreenContainer, BorderBox1 } from '@jiaminghi/data-view-react'
 import './index.less'
 import Header from './commpent/Header/index'
+import Title from './commpent/Title/Title'
+import Title2 from './commpent/Title/Title2'
+
+
 export default function BidScreen() {
   return (
     <div className='bid'>
@@ -17,18 +21,21 @@ export default function BidScreen() {
             <div className="left">
               {/* 空域图 */}
               <div className="left_top">
-                1
+                <Title title="空域图" name='现状设施'>
+                </Title>
               </div>
 
               {/* 设施图 */}
               <div className="left_center">
-                2
+                  <Title title="设施图" name='起降点'>
+                </Title>
               </div>
 
 
               {/* 产业图 */}
               <div className="left_bottom">
-                3
+                   <Title title="产业图" name='产业用地'>
+                </Title>
               </div>
 
             </div>
@@ -40,18 +47,21 @@ export default function BidScreen() {
             <div className="right">
               {/* 无人机飞行管理网 */}
               <div className="right_top">
-                无人机飞行管理网
+                 <Title2 title="无人机飞行管理网">
+                </Title2>
               </div>
 
               {/* 低空智能侦测网 */}
               <div className="right_center">
-                低空智能侦测网
+                 <Title2 title="低空智能侦测网" >
+                </Title2>
               </div>
 
 
               {/* 场景图 */}
               <div className="right_bottom">
-                场景图
+                 <Title2 title="场景图">
+                </Title2>
               </div>
             </div>
           </div>

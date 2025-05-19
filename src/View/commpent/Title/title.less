@@ -1,0 +1,65 @@
+.title{
+  width: 100%;
+  height: 100%;
+  // display: flex; /* <-- 取消注释 */
+  justify-content: space-between;
+  align-items: center; /* 可选：垂直居中文本和 SVG */
+  position: relative;
+}
+
+.title-text{
+    font-size: 0.16rem;
+    color: #fff;
+    position: absolute; /* 确保 SVG 相对于文本定位 */
+    // top: 0.2rem; 
+    /* 调整文本到 SVG 的顶部 */;
+}
+.title-text2{
+    font-size: 0.16rem;
+    color: #fff;
+    position: absolute; /* 确保 SVG 相对于文本定位 */
+    // top: 0.2rem; 
+    /* 调整文本到 SVG 的顶部 */;
+    right: 0;
+}
+.title-name{
+    font-size: 0.12rem;
+    color: #fff;
+    position: absolute; 
+    top: 0.05rem;
+    right:0;
+}
+
+
+.flowing-line {
+  /* 描边动画的关键属性 */
+  stroke-dasharray: 30 180; /* 示例：光带长度 30，空白 180 (总长约 210) */
+  stroke-dashoffset: 210; /* 初始偏移量，将光带移出视野 */
+
+  /* 应用 CSS 动画 */
+  animation: flow 3s linear infinite; /* 动画名称，持续时间，速度曲线，无限循环 */
+}
+
+/* 定义动画关键帧 */
+@keyframes flow {
+  to {
+    /* 将偏移量从 210 变为 -210，使光带从头流到尾，然后从头开始 */
+    stroke-dashoffset: -210;
+  }
+}
+.flowing-line2 {
+  /* 描边动画的关键属性 */
+  stroke-dasharray: 30 180; /* 示例：光带长度 30，空白 180 (总长约 210) */
+  stroke-dashoffset: -210; /* 初始偏移量，将光带移出视野 */
+
+  /* 应用 CSS 动画 */
+  animation: flow2 3s linear infinite; /* 动画名称，持续时间，速度曲线，无限循环 */
+}
+
+/* 定义动画关键帧 */
+@keyframes flow2 {
+  to {
+    /* 将偏移量从 210 变为 -210，使光带从头流到尾，然后从头开始 */
+    stroke-dashoffset:210;
+  }
+}
