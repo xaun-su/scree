@@ -1,9 +1,10 @@
 import React from 'react'
-import { FullScreenContainer, BorderBox1 } from '@jiaminghi/data-view-react'
+import { FullScreenContainer } from '@jiaminghi/data-view-react'
 import './index.less'
 import Header from './commpent/Header/index'
 import Title from './commpent/Title/Title'
 import Title2 from './commpent/Title/Title2'
+import ActiveRingChart from './commpent/ActiveRingChart'
 
 
 export default function BidScreen() {
@@ -21,20 +22,76 @@ export default function BidScreen() {
             <div className="left">
               {/* 空域图 */}
               <div className="left_top">
-                <Title title="空域图" name='现状设施'>
-                </Title>
+                <Title title="空域图" name='现状设施'></Title>
+                <div className="left_top-content">
+                  <div className='left_top-content_left'>
+                    <ActiveRingChart></ActiveRingChart>
+                  </div>
+                  <div className='left_top-content_right'>
+                    <div className='left_top-content_right-content'>
+                      {/* 圆点 */}
+                      <div className='left_top-content_right-content_dot-container'>
+                        <div className='left_top-content_right-content_dot'></div>
+                        {/* 文字 */}
+                        <div className='left_top-content_right-content_text'>枢纽机场</div>
+                      </div>
+                      {/* 数量 */}
+                      <div className='left_top-content_right-content_number'>1个</div>
+                    </div>
+                    <div className='left_top-content_right-content'>
+                      {/* 圆点 */}
+                      <div className='left_top-content_right-content_dot-container'>
+                        <div className='left_top-content_right-content_dot'></div>
+                        {/* 文字 */}
+                        <div className='left_top-content_right-content_text'>支线机场</div>
+                      </div>
+                      {/* 数量 */}
+                      <div className='left_top-content_right-content_number'>4个</div>
+                    </div>
+                    <div className='left_top-content_right-content'>
+                      {/* 圆点 */}
+                      <div className='left_top-content_right-content_dot-container'>
+                        <div className='left_top-content_right-content_dot'></div>
+                        {/* 文字 */}
+                        <div className='left_top-content_right-content_text'>通用机场</div>
+                      </div>
+                      {/* 数量 */}
+                      <div className='left_top-content_right-content_number'>3个</div>
+                    </div>
+                    <div className='left_top-content_right-content'>
+                      {/* 圆点 */}
+                      <div className='left_top-content_right-content_dot-container'>
+                        <div className='left_top-content_right-content_dot'></div>
+                        {/* 文字 */}
+                        <div className='left_top-content_right-content_text'>跑道型起降点</div>
+                      </div>
+                      {/* 数量 */}
+                      <div className='left_top-content_right-content_number'>5个</div>
+                    </div>
+                    <div className='left_top-content_right-content'>
+                      {/* 圆点 */}
+                      <div className='left_top-content_right-content_dot-container'>
+                        <div className='left_top-content_right-content_dot'></div>
+                        {/* 文字 */}
+                        <div className='left_top-content_right-content_text'>水上起降点</div>
+                      </div>
+                      {/* 数量 */}
+                      <div className='left_top-content_right-content_number'>1个</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* 设施图 */}
               <div className="left_center">
-                  <Title title="设施图" name='起降点'>
+                <Title title="设施图" name='起降点'>
                 </Title>
               </div>
 
 
               {/* 产业图 */}
               <div className="left_bottom">
-                   <Title title="产业图" name='产业用地'>
+                <Title title="产业图" name='产业用地'>
                 </Title>
               </div>
 
@@ -47,20 +104,20 @@ export default function BidScreen() {
             <div className="right">
               {/* 无人机飞行管理网 */}
               <div className="right_top">
-                 <Title2 title="无人机飞行管理网">
+                <Title2 title="无人机飞行管理网">
                 </Title2>
               </div>
 
               {/* 低空智能侦测网 */}
               <div className="right_center">
-                 <Title2 title="低空智能侦测网" >
+                <Title2 title="低空智能侦测网" >
                 </Title2>
               </div>
 
 
               {/* 场景图 */}
               <div className="right_bottom">
-                 <Title2 title="场景图">
+                <Title2 title="场景图">
                 </Title2>
               </div>
             </div>

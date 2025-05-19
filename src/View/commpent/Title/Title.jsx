@@ -2,8 +2,8 @@ import React from 'react';
 import './title.less'; // 确保路径正确
 
 export default function Title(props) {
-  const pointsData = "0,20 110,20 140,0 190,0 200,0";
-  const backgroundSegment1 = "0,20 110,20 140,0 195,0"; // P0 -> P1 -> P2
+  const pointsData = "0,20 115,20 145,0 190,0 200,0";
+  const backgroundSegment1 = "0,20 115,20 145,0 195,0"; // P0 -> P1 -> P2
   const backgroundSegment2 = "195,0 200,0"; 
 
   return (
@@ -11,7 +11,7 @@ export default function Title(props) {
       {/* 传入的标题 */}
       <div className='title-text'>{props.title}</div>
       {/* 标题线条 - SVG */}
-      <svg width="100%" height="13%" viewBox="0 0 200 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="100%" height="100%" viewBox="0 0 200 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           {/* 定义一个滤镜来创建辉光效果，只应用到流光线上*/}
           <filter id="glow">
