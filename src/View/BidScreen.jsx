@@ -6,7 +6,7 @@ import Title from './commpent/Title/Title'
 import Title2 from './commpent/Title/Title2'
 import ActiveRingChart from './commpent/ActiveRingChart'
 import Facilities from './commpent/facilities/Facilities'
-
+import Industry from './commpent/industry/Industry'
 
 
 export default function BidScreen() {
@@ -93,8 +93,8 @@ export default function BidScreen() {
 
               {/* 产业图 */}
               <div className="left_bottom">
-                <Title title="产业图" name='产业用地'>
-                </Title>
+                <Title title="产业图" name='产业用地'></Title>
+                <Industry></Industry>
               </div>
 
             </div>
