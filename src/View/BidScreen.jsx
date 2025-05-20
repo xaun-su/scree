@@ -5,6 +5,8 @@ import Header from './commpent/Header/index'
 import Title from './commpent/Title/Title'
 import Title2 from './commpent/Title/Title2'
 import ActiveRingChart from './commpent/ActiveRingChart'
+import Facilities from './commpent/facilities/Facilities'
+
 
 
 export default function BidScreen() {
@@ -84,8 +86,8 @@ export default function BidScreen() {
 
               {/* 设施图 */}
               <div className="left_center">
-                <Title title="设施图" name='起降点'>
-                </Title>
+                <Title title="设施图" name='起降点'></Title>
+                <Facilities></Facilities>
               </div>
 
 

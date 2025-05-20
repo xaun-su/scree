@@ -8,23 +8,18 @@ export default function ActiveRingChartZu() {
   const [config, setConfig] = useState({
     data: [
       {
-        name: '枢纽机场',
         value: 1
       },
       {
-        name: '支线机场',
         value: 4
       },
       {
-        name: '通用机场',
         value: 3
       },
       {
-        name: '跑道型起降点',
         value: 5
       },
       {
-        name: '水上起降点',
         value: 1
       }
     ],
@@ -33,9 +28,9 @@ export default function ActiveRingChartZu() {
     activeRadius: '90%', // 半径 
     digitalFlopStyle: {
       fontSize: 0.000001, // 隐藏数字,
-      fill: '#fff'
+      fill: 'rgb(0,0,0,0)', // 隐藏数字
     },
-    activeTimeGap: 99999999999000, // 动画时间间隔 (设置非常大以取消自动切换)
+    activeTimeGap: 9999999900, // 动画时间间隔 (设置非常大以取消自动切换)
     color: ['#33a8ff', '#5bf2ff', '#f6bd15', '#878cdc', '#878cdc'] // 你的颜色数组
   });
 
@@ -93,10 +88,10 @@ export default function ActiveRingChartZu() {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: 9, // 确保在透明圆圈之上
+        zIndex: 8, // 确保在透明圆圈之上
         color: '#fff',
         fontSize: '0.2rem', // 调整字体大小
-        fontWeight: 'bold', // 调整字体粗细
+        // fontWeight: 'bold', // 调整字体粗细
         pointerEvents: 'none', // 确保文本不阻碍鼠标事件穿透
         display: 'flex',
         flexDirection: 'column',
