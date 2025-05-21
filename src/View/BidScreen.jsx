@@ -7,6 +7,7 @@ import Title2 from './commpent/Title/Title2'
 import ActiveRingChart from './commpent/ActiveRingChart'
 import Facilities from './commpent/facilities/Facilities'
 import Industry from './commpent/industry/Industry'
+import Scatter from './commpent/scatter/Scatter.jsx'
 
 
 export default function BidScreen() {
@@ -106,14 +107,22 @@ export default function BidScreen() {
             <div className="right">
               {/* 无人机飞行管理网 */}
               <div className="right_top">
-                <Title2 title="无人机飞行管理网">
-                </Title2>
+                <Title2 title="无人机飞行管理网"></Title2>
+                <div className="right_top_content">
+                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>指挥调度</span></div>
+                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>设备管理</span></div>
+                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>航线库</span></div>
+                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>资产库</span></div>
+                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>AI分析</span></div>
+                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>计划库</span></div>
+                </div>
+
               </div>
 
               {/* 低空智能侦测网 */}
               <div className="right_center">
-                <Title2 title="低空智能侦测网" >
-                </Title2>
+                <Title2 title="低空智能侦测网" ></Title2>
+                <Scatter></Scatter>
               </div>
 
 

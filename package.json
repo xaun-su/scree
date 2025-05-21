@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@antv/g2": "^5.3.2",
+    "@antv/g2": "^5.3.3",
     "@jiaminghi/data-view-react": "^1.2.5",
     "echarts": "^5.6.0",
     "echarts-for-react": "^3.0.2",
