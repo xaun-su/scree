@@ -8,6 +8,10 @@ import ActiveRingChart from './commpent/ActiveRingChart'
 import Facilities from './commpent/facilities/Facilities'
 import Industry from './commpent/industry/Industry'
 import Scatter from './commpent/scatter/Scatter.jsx'
+import Airspace from './commpent/airspace/Airspace.jsx'
+import Arc from './commpent/arc/Arc' 
+
+
 
 
 export default function BidScreen() {
@@ -101,7 +105,13 @@ export default function BidScreen() {
             </div>
             {/* 中间区域:地图 */}
             <div className="center">
-              我是中心区域
+            {/* 背景图的外部模糊框 */}
+              {/* <div className='center_img_bg'> */}
+                {/* 引入背景图 */}
+                <div className='center_img'></div>
+                <Arc/>
+                
+              {/* </div> */}
             </div>
             {/* 右边区域:数据展示 */}
             <div className="right">
@@ -109,12 +119,12 @@ export default function BidScreen() {
               <div className="right_top">
                 <Title2 title="无人机飞行管理网"></Title2>
                 <div className="right_top_content">
-                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>指挥调度</span></div>
-                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>设备管理</span></div>
-                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>航线库</span></div>
-                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>资产库</span></div>
-                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>AI分析</span></div>
-                  <div className='content_text'><span style={{marginLeft:'0.2rem'}}>计划库</span></div>
+                  <div className='content_text'><span style={{ marginLeft: '0.2rem' }}>指挥调度</span></div>
+                  <div className='content_text'><span style={{ marginLeft: '0.2rem' }}>设备管理</span></div>
+                  <div className='content_text'><span style={{ marginLeft: '0.2rem' }}>航线库</span></div>
+                  <div className='content_text'><span style={{ marginLeft: '0.2rem' }}>资产库</span></div>
+                  <div className='content_text'><span style={{ marginLeft: '0.2rem' }}>AI分析</span></div>
+                  <div className='content_text'><span style={{ marginLeft: '0.2rem' }}>计划库</span></div>
                 </div>
 
               </div>
@@ -128,8 +138,34 @@ export default function BidScreen() {
 
               {/* 场景图 */}
               <div className="right_bottom">
-                <Title2 title="场景图">
-                </Title2>
+                <Title2 title="场景图"></Title2>
+                <div className='right_bottom_content'>
+                  <div className='right_bottom_content_img'>
+                    <div className='right_bottom_imgLeft'>
+                      <p>公共服务</p>
+                      <p><span>32</span>项</p>
+                    </div>
+                    <div className='right_bottom_imgRight'>
+                      <p>商业服务</p>
+                      <p><span>34</span>项</p>
+                    </div>
+                  </div>
+                  <div className='right_bottom_content_img'>
+                    <div className='right_bottom_imgLeft'>
+                      <p>行业服务</p>
+                      <p><span>12项</span></p>
+                    </div>
+                    <div className='right_bottom_imgRight'>
+                      <p>其他服务</p>
+                      <p><span>10</span>项</p>
+                    </div>
+                  </div>
+                  {/* 进行定位于中间 */}
+                  <div className='right_bottom_echarts'>
+                    <Airspace></Airspace>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>

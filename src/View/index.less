@@ -5,7 +5,9 @@
   background-position: center;
   background-image: url(../assets/images/背景框.png);
   background-size: 100% 95%;
-  background-color: black;
+  background-color: #02112c;
+  // 渐变背景
+
   z-index: 1;
   background-repeat: no-repeat;
   display: flex;
@@ -136,8 +138,120 @@
     font-weight: bold;
   }
 }
+.right_bottom_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  img{
+    width: 0.8rem;
+    height: 0.7rem;
+    // margin-top: 0.2rem;
+  }
+  .right_bottom_content_img{
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  //定位到中心
+  .right_bottom_echarts{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+  }
+}
+.right_bottom_imgLeft{
+  width: 0.8rem;
+  height: 0.7rem;
+  background-image: url(../assets/images/底板左.png);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+    color: #fff;
+    font-size: 0.1rem;
+    margin-top: 0.05rem;
+    margin-left: 0.1rem;
+    opacity: 0.8;
+    span{
+      font-size: 0.13rem;
+      opacity: 1;
+      color: #fff;
+            margin-right: 0.05rem;
+
+    }
+  }
+}
+.right_bottom_imgRight{
+  width: 0.8rem;
+  height: 0.7rem;
+  background-image: url(../assets/images/底板右.png); 
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+    color: #fff;
+    font-size: 0.1rem;
+    margin-top: 0.05rem;
+    margin-left: 0.1rem;
+    opacity: 0.8;
+    span{
+       font-size: 0.13rem;
+      opacity: 1;
+      color: #fff;
+      margin-right: 0.05rem;
+    }
+
+  }
+}
 /*中心区 */
 .center {
   width: 60%;
   height: 100%;
 }
+.center_img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/地球投影.png);
+  background-position: center 0.8rem; /* 图片顶部距离容器顶部0.8rem, 水平居中 */
+  background-size: 30%; /* 图片宽度是容器宽度的30% */
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative; /* 确保伪元素基于此容器定位 */
+  /* 如果需要，可以保留 flex 布局来居中其他内容，但对于背景图片和伪元素定位不是必须的 */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.center_img::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem; 
+  left: 50%; 
+  transform: translateX(-50%);
+
+  width: 30%; 
+  /* 高度会自动根据 width 和 aspect-ratio 计算，与背景图片高度一致 */
+  aspect-ratio: 1 / 1; /* 确保伪元素是正圆 */
+  border-radius: 50%;
+  background: rgba(85, 188, 255, 0.5); /* 半透明白色背景，用于模糊效果 */
+  filter: blur(15px); /* 添加模糊滤镜，调整像素值控制模糊程度 */
+  z-index: 2; /* 确保伪元素在背景图片之上 */
+  pointer-events: none; /* 确保伪元素不阻碍鼠标事件穿透 */
+  // border: 50px solid red; /* 添加边框，使边框与背景图片一致 */;
+}
+
