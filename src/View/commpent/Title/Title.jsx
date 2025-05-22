@@ -4,7 +4,7 @@ import './title.less'; // 确保路径正确
 export default function Title(props) {
   const pointsData = "0,20 115,20 145,0 190,0 200,0";
   const backgroundSegment1 = "0,20 115,20 145,0 195,0"; // P0 -> P1 -> P2
-  const backgroundSegment2 = "195,0 200,0"; 
+  const backgroundSegment2 = "195,0 200,0";
 
   return (
     <div className='title'>
@@ -15,10 +15,16 @@ export default function Title(props) {
         <defs>
           {/* 定义一个滤镜来创建辉光效果，只应用到流光线上*/}
           <filter id="glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            {/* 应用高斯模糊来创建辉光效果 */}
+            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+            {/* 合并滤镜和源图像 */}
             <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
+              {/* 应用辉光效果 
+              in="coloredBlur" 表示将之前 feGaussianBlur 处理后的模糊效果作为输入。
+              in="SourceGraphic" 表示将原始图形作为输入。
+            */}
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
 
@@ -38,10 +44,10 @@ export default function Title(props) {
           points={backgroundSegment1}
           fill="none"
           // stroke="#1c96a9" // 移除纯色描边
-          stroke="url(#backgroundGradient)" 
+          stroke="url(#backgroundGradient)"
           strokeWidth="2" // 背景线粗细
         />
-         {/* 第二段：使用突出显示的颜色 */}
+        {/* 第二段：使用突出显示的颜色 */}
         <polyline
           points={backgroundSegment2}
           fill="none"
