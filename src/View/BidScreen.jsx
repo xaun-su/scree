@@ -9,7 +9,7 @@ import Facilities from './commpent/facilities/Facilities'
 import Industry from './commpent/industry/Industry'
 import Scatter from './commpent/scatter/Scatter.jsx'
 import Airspace from './commpent/airspace/Airspace.jsx'
-import Arc from './commpent/arc/Arc' 
+import EllipseRings from './commpent/arc/EllipseRings.jsx'
 
 
 
@@ -105,12 +105,19 @@ export default function BidScreen() {
             </div>
             {/* 中间区域:地图 */}
             <div className="center">
-            {/* 背景图的外部模糊框 */}
-              {/* <div className='center_img_bg'> */}
-                {/* 引入背景图 */}
-                <div className='center_img'></div>
-                <Arc/>
-                
+              {/* 背景图的外部模糊框 */}
+              {/* 引入背景图 */}
+              <div className='center_img'></div>
+              <div style={{
+                zIndex: 100,
+                position: 'absolute',
+                top: '30%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}>
+                <EllipseRings />
+              </div>
+
               {/* </div> */}
             </div>
             {/* 右边区域:数据展示 */}
